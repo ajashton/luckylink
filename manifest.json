@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Insert Lucky Link",
+  "description": "Replaces a selection in a text field with a markdown link to the Google 'Feeling Lucky' result for that text.",
+  "version": "0.1",
+
+  "permissions": [
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "luckylink.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["luckylink_content.js"]
+    }
+  ]
+}
